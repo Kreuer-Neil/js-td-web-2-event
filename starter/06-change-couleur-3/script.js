@@ -9,3 +9,17 @@ EXERCICE 6 : Change couleur (3)
 */
 
 // ÉTAPE 1 : on ne gère que le clic
+
+colorise = {
+    short: document.getElementById('colorForm'),
+    colorField: document.querySelector('input[type="text"]'),
+
+    init() {
+        document.getElementById('colorBtn').addEventListener('click',((e)=> {
+            console.log(e);
+            document.body.style.backgroundColor = this.colorField.value;
+        }))
+    }
+}
+
+colorise.init();

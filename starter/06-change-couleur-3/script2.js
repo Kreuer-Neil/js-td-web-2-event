@@ -14,3 +14,18 @@ EXERCICE 6 : Change couleur (3)
 
 // ÉTAPE 2 : version avec deux écouteurs
 
+
+colorise = {
+    short: document.getElementById('colorForm'),
+    colorField: document.querySelector('input[type="text"]'),
+
+    init() {
+        this.short.addEventListener('submit',((e)=> {
+            e.preventDefault();
+            console.log(e);
+            document.body.style.backgroundColor = this.colorField.value;
+        }))
+    }
+}
+
+colorise.init();

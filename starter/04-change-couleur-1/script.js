@@ -7,13 +7,14 @@ Au clic sur un des boutons, colorie la page dans la couleur choisie par l'utilis
 */
 
 const colorise = {
-    colors: document.querySelector(".actions").children,
+    colors: document.querySelectorAll("button"),
 
     init() {
-            this.colors.forEach((color) => {
+        console.log(this.colors)
+
+        this.colors.forEach((color) => {
                 color.addEventListener('click', (e) => {
-
-
+                    document.body.classList = e.currentTarget.id;
                 })
             }
         )
@@ -21,8 +22,3 @@ const colorise = {
 }
 
 colorise.init();
-
-
-/*
-* colorInput.addEventListener('click',(e) => {
-* */
