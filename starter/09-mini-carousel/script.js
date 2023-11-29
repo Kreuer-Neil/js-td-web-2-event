@@ -14,3 +14,12 @@ AIDE : voici les étapes :
 5. En fin de longueur du tableau, on redémarre au début de l'index
 */
 
+const imagesSources = ['img/becode-seal.png','img/clock.svg','img/compass.svg','img/kiss.svg','img/kiss-wink-heart.svg','img/lenon.svg','img/map.svg','img/bell.svg']
+let i = 0;
+
+document.getElementById('next').addEventListener('click',(e)=>{
+    document.querySelector('')
+    i++;
+    if (i === imagesSources.length) i = 0;
+
+})
