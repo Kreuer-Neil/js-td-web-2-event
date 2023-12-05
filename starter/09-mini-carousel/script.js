@@ -14,12 +14,25 @@ AIDE : voici les étapes :
 5. En fin de longueur du tableau, on redémarre au début de l'index
 */
 
-const imagesSources = ['img/becode-seal.png','img/clock.svg','img/compass.svg','img/kiss.svg','img/kiss-wink-heart.svg','img/lenon.svg','img/map.svg','img/bell.svg']
-let i = 0;
+const caroussel = {
+    imagesSources: [
+        'img/becode-seal.png',
+        'img/clock.svg',
+        'img/compass.svg',
+        'img/kiss.svg',
+        'img/kiss-wink-heart.svg',
+        'img/lemon.svg',
+        'img/map.svg',
+        'img/bell.svg'],
+    i: 0,
+    init() {
 
-document.getElementById('next').addEventListener('click',(e)=>{
-    document.querySelector('')
-    i++;
-    if (i === imagesSources.length) i = 0;
+        document.getElementById('next').addEventListener('click', () => {
+            document.querySelector('figure img').src = this.imagesSources[this.i];
+            this.i++;
+            if (this.i === this.imagesSources.length) this.i = 0;
+        });
+    }
+}
 
-})
+caroussel.init();
